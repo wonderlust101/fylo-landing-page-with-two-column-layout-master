@@ -12,6 +12,7 @@
 
   &__divider {
     width: 100%;
+    color: var(--clr-neutral-color-light-grayish-blue);
   }
 
   &__feature {
@@ -20,6 +21,10 @@
     background-color: var(--clr-neutral-color-light-grayish-blue);
     padding: 3rem 1.75rem;
     width: 100%;
+
+    @include a.breakpoint(medium) {
+      padding: 3rem 5rem;
+    }
 
     & > * {
       display: grid;
@@ -78,13 +83,13 @@
     gap: 1rem;
     padding: 1.75rem;
     font-size: 0.8rem;
-    font-weight: 600;
+    font-weight: 500;
     border-radius: 0.5rem;
     letter-spacing: 0.02406rem;
     line-height: 1.75;
     background-color: var(--clr-white);
     box-shadow: 0 0 8px 4px rgba(56, 56, 56, 0.05);
-    
+
     @include a.breakpoint(medium) {
       max-width: 25rem;
     }
@@ -112,6 +117,10 @@
     color: var(--clr-white);
     background-color: var(--clr-primary-color-desaturated-blue);
     padding: 3.5rem 3rem;
+
+    @include a.breakpoint(medium) {
+      padding: 6rem 5rem;
+    }
   }
 
   &__cta-content {
@@ -134,15 +143,15 @@
   }
 
   &__cta-form {
-    @include a.breakpoint(medium){
+    @include a.breakpoint(medium) {
       width: 100%;
     }
-    
+
     & > * {
       display: grid;
       gap: 1rem;
       width: 100%;
-      
+
       & > *:last-child {
         min-width: max-content;
         width: 40%;

@@ -8,7 +8,7 @@
   margin: 2rem 0 6rem;
   
   @include a.breakpoint(medium) {
-    width: min(80%, 120rem);
+    width: min(90%, 120rem);
   }
   
   &__logo {
