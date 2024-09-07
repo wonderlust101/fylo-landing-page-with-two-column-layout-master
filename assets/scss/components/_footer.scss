@@ -46,6 +46,10 @@
   &__contact-flex {
     display: flex;
     gap: 1rem;
+    
+    & > * {
+      color: var(--clr-white);
+    }
   }
 
   &__links {
