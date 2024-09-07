@@ -1,0 +1,42 @@
+@use '../abstract' as a;
+
+.hero {
+  display: grid;
+  gap: 2.5rem;
+  width: min(90%, 100rem);
+  margin: 5rem;
+  text-align: center;
+  
+  @include a.breakpoint(medium) {
+    text-align: left;
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  &__content {
+    display: grid;
+    gap: 2rem;
+
+    @include a.breakpoint(medium) {
+      align-content: center;
+     order: -1;
+    }
+  }
+
+  &__text {
+    display: grid;
+    gap: 1.5rem;
+  }
+  
+  &__form {
+    & > * {
+      display: grid;
+      align-items: flex-start;
+      gap: 1rem;
+      width: 100%;
+
+      @include a.breakpoint(medium) {
+        grid-template-columns: 1fr 35%;
+      }
+    }
+  }
+}

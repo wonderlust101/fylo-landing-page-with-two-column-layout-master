@@ -2,15 +2,21 @@
 $colors: (
   // Main Colors
         primary-color: (
-                'star-dust': #f9f3dd,
-                'crackled': #f2e7d1,
-                'neon-spring': #3ffd6a,
-                'iris-royale': #591b98,
-                'fading-horizon': #442266,
-                'election-night': #110320,
+                'very-dark-blue': hsl(243, 87%, 12%),
+                'desaturated-blue': hsl(238, 22%, 44%),
+        ),
+        accent-color: (
+                'bright-blue': hsl(224, 93%, 58%),
+                'moderate-cyan': hsl(170, 45%, 43%),
+                'error-red': hsl(343, 84%, 61%),
+        ),
+        neutral-color: (
+                'light-grayish-blue': hsl(240, 75%, 98%),
+                'light-gray': hsl(0, 0%, 75%),
         ),
   // Other
-        'background': #fafafa,
-        'white': #ffffff,
-        'black': #000000,
+        'background': hsl(0, 0%, 100%),
+        'box-shadow': hsla(0, 0%, 22%, 0.2),
+        'white': hsl(0, 0%, 100%),
+        'black': hsl(0, 0%, 0%),
 );

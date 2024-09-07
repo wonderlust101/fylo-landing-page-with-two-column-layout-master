@@ -7,40 +7,172 @@
     <!--     <meta name="title" content="title"> -->
     <!--     <meta name="description" content="description"> -->
 
-    <title>Document</title>
-    <!--         <link rel="icon" href="assets/images/favicon.png" /> -->
+    <script src="https://kit.fontawesome.com/f2b4deb65b.js" crossorigin="anonymous"></script>
+
+    <title>Frontend Mentor | Fylo landing page with two column layout</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
 
     <link rel="stylesheet" href="assets/css/main.css"/>
-
-    <!--Remove later-->
-    <style>
-        @font-face {
-            font-family: 'VT323';
-            src: url('assets/fonts/DotGothic16-Regular.ttf');
-        }
-
-        * {
-            font-family: 'VT323', sans-serif;
-            font-size: 120px;
-        }
-    </style>
-    <!--Remove later-->
 </head>
-<body>
-    <div style="display: grid; height: 100vh;">
-        <div style="width: 100%; background-color:var(--clr-primary-color-star-dust); display: flex; align-items: center; justify-content: center;
-        flex-direction: column"><h1 style="color: var(--clr-primary-color-election-night)">新世紀エヴァンゲリオン</h1></div>
-        <div style="width: 100%; background-color:var(--clr-primary-color-crackled); display: flex; align-items: center; justify-content: center;
-        flex-direction: column"><h1 style="color: var(--clr-primary-color-fading-horizon)">Neon Genesis Evangelion</h1></div>
-        <div style="width: 100%; background-color:var(--clr-primary-color-neon-spring); display: flex; align-items: center; justify-content: center;
-        flex-direction: column"><h1 style="color: var(--clr-primary-color-iris-royale)">新世紀エヴァンゲリオン</h1></div>
-        <div style="width: 100%; background-color:var(--clr-primary-color-iris-royale); display: flex; align-items: center; justify-content: center;
-        flex-direction: column"><h1 style="color: var(--clr-primary-color-neon-spring)">Neon Genesis Evangelion</h1></div>
-        <div style="width: 100%; background-color:var(--clr-primary-color-fading-horizon); display: flex; align-items: center; justify-content: center;
-        flex-direction: column"><h1 style="color: var(--clr-primary-color-crackled)">新世紀エヴァンゲリオン</h1></div>
-        <div style="width: 100%; background-color:var(--clr-primary-color-election-night);display: flex; align-items: center; justify-content: center;
-        flex-direction: column"><h1 style="color: var(--clr-primary-color-star-dust)">Neon Genesis Evangelion</h1></div>
-    </div>
+<body class="landing-page">
+    <header class="header">
+        <img class="header__logo" src="./assets/images/logo.svg" alt="Fylo Logo">
+
+        <nav class="header__nav">
+            <ul class="header__nav-flex">
+                <li><a class="header__nav-link" href="/" aria-label="Go to Features Page">Features</a></li>
+                <li><a class="header__nav-link" href="/" aria-label="Go to Team Page">Team</a></li>
+                <li><a class="header__nav-link" href="/" aria-label="Go to Features Page">Sign In</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="landing-page__content">
+        <div class="hero">
+            <img src="./assets/images/illustration-1.svg" alt="" aria-hidden="true">
+
+            <section class="hero__content">
+                <div class="hero__text">
+                    <h1>All your files in one secure location, accessible anywhere.</h1>
+                    <p>Fylo stores your most important files in one secure location.
+                        Access them wherever you need, share and collaborate with friends,
+                        family, and co-workers.</p>
+                </div>
+
+                <form id="hero-form" class="hero__form" novalidate>
+                    <fieldset>
+                        <div class="text-input">
+                            <label class="sr-only" for="hero-email">Email Address</label>
+                            <input class="text-input__field" id="hero-email" type="email" placeholder="Enter your email…" spellcheck="false"
+                                   autocomplete="email"
+                                   aria-required="true" required>
+                            <p class="text-input__status">Please check your email</p>
+                        </div>
+
+                        <button class="button button--blue" type="submit">Get Started</button>
+                    </fieldset>
+                </form>
+            </section>
+        </div>
+
+        <picture class="landing-page__divider">
+            <source class="landing-page__divider" srcset="./assets/images/bg-curve-desktop.svg" media="(min-width: 48rem)">
+            <img class="landing-page__divider" src="./assets/images/bg-curve-mobile.svg" alt="" aria-hidden="true">
+        </picture>
+
+        <div class="landing-page__feature">
+            <div>
+                <img src="./assets/images/illustration-2.svg" alt="" aria-hidden="true">
+
+                <section class="landing-page__feature-content">
+                    <div class="landing-page__feature-text">
+                        <h2>Stay productive, wherever you are</h2>
+
+                        <div class="landing-page__feature-text-body">
+                            <p>Never let location be an issue when accessing your files. Fylo has you
+                                covered for all of your file storage needs.</p>
+
+                            <p>Securely share files and folders with friends, family and colleagues for
+                                live collaboration. No email attachments required!</p>
+
+                            <div class="landing-page__feature-link">
+                                <a>See how Fylo works</a>
+                                <img src="./assets/images/icon-arrow.svg" alt="" aria-hidden="true">
+                            </div>
+                        </div>
+                    </div>
+
+                    <section class="landing-page__testimonial">
+                        <img class="landing-page__testimonial-icon" src="./assets/images/icon-quotes.svg" alt="" aria-hidden="true">
+                        <p> Fylo has improved our team productivity by an order of magnitude. Since
+                            making the switch our team has become a well-oiled collaboration machine.</p>
+
+                        <div class="landing-page__testimonial-user">
+                            <img class="landing-page__testimonial-user-img" src="./assets/images/avatar-testimonial.jpg" alt="Profile of Kyle Burton">
+                            <section class="landing-page__testimonial-user-name">
+                                <h4>Kyle Burton</h4>
+                                <p class="landing-page__testimonial-occupation">Founder & CEO, Huddle</p>
+                            </section>
+                        </div>
+                    </section>
+                </section>
+            </div>
+        </div>
+
+        <div class="landing-page__cta">
+            <div class="landing-page__cta-content">
+                <section class="landing-page__cta-text">
+                    <h3>Get early access today</h3>
+
+                    <p>It only takes a minute to sign up and our free starter tier is extremely generous.
+                        If you have any questions, our support team would be happy to help you.</p>
+                </section>
+
+                <form id="cta-form" class="landing-page__cta-form" novalidate>
+                    <fieldset>
+                        <div class="text-input">
+                            <label class="sr-only" for="email-cta">Email Address</label>
+                            <input class="text-input__field" id="email-cta" type="email" placeholder="email@example.com"
+                                   spellcheck="false"
+                                   autocomplete="email"
+                                   aria-required="true" required>
+                            <p class="text-input__status">Please check your email</p>
+                        </div>
+
+                        <button class="button button--blue" type="submit">Get Started For Free</button>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__content">
+            <img class="footer__logo" src="./assets/images/logo.svg" alt="Fylo Logo">
+
+            <div class="footer__details">
+                <div class="footer__contact">
+                    <div class="footer__contact-flex">
+                        <img src="./assets/images/icon-phone.svg" alt="" aria-hidden="true">
+                        <p>Phone: +1-543-123-4567</p>
+                    </div>
+                    <div class="footer__contact-flex">
+                        <img src="./assets/images/icon-phone.svg" alt="" aria-hidden="true">
+                        <p>example@fylo.com</p>
+                    </div>
+                </div>
+
+                <nav>
+                    <ul class="footer__links">
+                        <li><a href="/" aria-label="Go to About Us Page">About Us</a></li>
+                        <li><a href="/" aria-label="Go to Jobs Page">Jobs</a></li>
+                        <li><a href="/" aria-label="Go to Press Page">Press</a></li>
+                        <li><a href="/" aria-label="Go to Blog Page">Blog</a></li>
+                    </ul>
+                </nav>
+
+                <nav>
+                    <ul class="footer__links">
+                        <li><a href="/" aria-label="Go to Contact Us Page">Contact Us</a></li>
+                        <li><a href="/" aria-label="Go to Terms Page">Terms</a></li>
+                        <li><a href="/" aria-label="Go to Privacy Page">Privacy</a></li>
+                    </ul>
+                </nav>
+
+                <div class="footer__socials">
+                    <a href="/" aria-label="Go to Flyo Facebook Page">
+                        <i class="fa-fw fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="/" aria-label="Go to Flyo Twitter Page">
+                        <i class="fa-fw fa-brands fa-twitter"></i>
+                    </a>
+                    <a href="/" aria-label="Go to Flyo Instagram Page">
+                        <i class="fa-fw fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="assets/scripts/index.js"></script>
 </body>

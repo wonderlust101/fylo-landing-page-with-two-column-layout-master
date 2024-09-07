@@ -1,0 +1,36 @@
+@use '../abstract' as a;
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 2rem 0 6rem;
+  
+  @include a.breakpoint(medium) {
+    width: min(80%, 120rem);
+  }
+  
+  &__logo {
+    width: 7.5rem;
+    
+    @include a.breakpoint(medium) {
+      width: 10rem;
+    }
+  }
+
+  &__nav-flex {
+    display: flex;
+    gap: 1rem;
+    
+    & > * {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--clr-primary-color-very-dark-blue);
+
+      @include a.breakpoint(medium) {
+        font-size: 1rem;
+      }
+    }
+  }
+}

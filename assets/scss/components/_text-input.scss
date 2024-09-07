@@ -1,0 +1,44 @@
+@use '../abstract' as a;
+
+.text-input {
+  display: grid;
+  gap: 0.25rem;
+  width: inherit;
+  position: relative;
+  
+  &__field {
+    width: inherit;
+    padding: 0.8rem 1.25rem;
+    border: 1px solid var(--clr-primary-color-very-dark-blue);
+    border-radius: 0.25rem;
+    outline: none !important;
+
+    &::placeholder {
+      color: var(--clr-neutral-color-light-gray);
+    }
+
+    &:focus {
+      border: 1px solid var(--clr-accent-color-bright-blue);
+    }
+
+    &--error,
+    &--error:focus {
+      border: 1px solid var(--clr-accent-color-error-red);
+    }
+  }
+  
+  &__status {
+    display: none;
+    bottom: -1.25rem;
+    font-size: 0.75rem;
+    color: var(--clr-accent-color-error-red);
+    text-align: left;
+    
+    &--absolute {
+      position: unset;
+      @include a.breakpoint(medium){
+        position: absolute;
+      }
+    }
+  }
+}

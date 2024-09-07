@@ -1,6 +1,31 @@
 @use '../abstract' as a;
 
 h1, h2, h3, h4,
-h5, h6, p {
+h5, h6, a, button {
+  font-family: 'Raleway', sans-serif;
+}
 
+h4 {
+  font-size: 0.8rem;
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+input {
+  font-family: 'Open Sans', sans-serif;
+}
+
+input::placeholder {
+  font-family: 'Raleway', sans-serif;
 }
