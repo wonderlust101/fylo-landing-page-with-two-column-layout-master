@@ -7,7 +7,8 @@ h5, h6, a, button {
 
 h1 {
   font-size: 1.5rem;
-  
+  color: var(--clr-primary-color-very-dark-blue);
+
   @include a.breakpoint(medium){
     font-size: 2.5rem;
   }
@@ -15,6 +16,7 @@ h1 {
 
 h2 {
   font-size: 1rem;
+  color: var(--clr-primary-color-very-dark-blue);
 
   @include a.breakpoint(medium){
     font-size: 2.5rem;
@@ -35,6 +37,7 @@ h4 {
 
 p {
   font-family: 'Open Sans', sans-serif;
+  color: var(--clr-primary-color-very-dark-blue);
 }
 
 a {

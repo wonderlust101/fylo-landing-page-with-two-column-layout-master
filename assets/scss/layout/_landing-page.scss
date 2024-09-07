@@ -33,7 +33,7 @@
       max-width: 100rem;
 
       @include a.breakpoint(medium) {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 55% 1fr;
         align-items: center;
       }
     }
